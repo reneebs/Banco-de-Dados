@@ -1,27 +1,24 @@
-import java.util.Scanner; // Importa a classe Scanner para poder receber dados digitados pelo usuário.
+import java.util.Scanner; // Importa a classe Scanner para poder receber dados digitados pelo usuário. 
+ 
+public class Principal { 
+    public static void main(String[] args) { 
+ 
+      // Cria o Scanner para conseguir ler o número digitado pelo usuário. 
+      Scanner scanner = new Scanner(System.in); 
+ 
+      // Pede para o usuário digitar um número. 
+      System.out.print("Digite um numero: "); 
+ 
+      // Guarda o número digitado dentro da variável "num". 
+      int num = scanner.nextInt(); 
+ 
+      // Mostra o número que o usuário digitou. 
+      System.out.println("O seu número é " + num + "."); 
+ 
+      // Aumenta 1 no número para encontrar o sucessor.
+      System.out.println("SUCESSOR: " + (num + 1)); 
 
-public class Principal {
-    public static void main(String[] args) {
-
-      // Cria o Scanner para conseguir ler o número digitado pelo usuário.
-      Scanner scanner = new Scanner(System.in);
-
-      // Pede para o usuário digitar um número.
-      System.out.print("Digite um numero: ");
-
-      // Guarda o número digitado dentro da variável "num".
-      int num = scanner.nextInt();
-
-      // Mostra o número que o usuário digitou.
-      System.out.println("O seu número é " + num + ".");
-
-      // O "--num" diminui 1 do valor atual de "num" antes de mostrar o resultado.
-      // Por exemplo: se num for 10, ele passa a ser 9.
-      System.out.println("\nO número antecessor do seu número é " + --num + ".");
-
-      // O "++num" aumenta 1 do valor atual de "num" antes de mostrar o resultado.
-      // Como num estava em 9, ele volta para 10.
-      System.out.println("O número sucessor do seu número é " + ++num + ".");
-    
-    }
+      // Diminui 1 no número para encontrar o antecessor.
+      System.out.println("ANTECESSOR: " + (num - 1)); 
+    } 
 }
