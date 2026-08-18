@@ -1,15 +1,28 @@
-import java.util.Scanner; // 0. Importa a classe Scanner
+import java.util.Scanner; // Importa a classe Scanner para poder receber dados digitados pelo usuário.
 
 public class Principal {
     public static void main(String[] args) {
+
+      // Cria o Scanner para conseguir ler o número que o usuário digitar.
       Scanner scanner = new Scanner(System.in);
 
+      // Pede para o usuário digitar um número inteiro.
       System.out.print("Digite o primeiro número inteiro: ");
-        int num = scanner.nextInt();
 
+      // Guarda o número digitado pelo usuário dentro da variável "num".
+      int num = scanner.nextInt();
+
+      // O "%" (módulo) pega o resto da divisão.
+      // Se o resto da divisão por 2 for 0, o número é par.
       if(num % 2 == 0) {
+
+        // Caso a condição seja verdadeira, informa que o número é par.
         System.out.println("Seu número é par.");
+
+      // Se o resto não for 0, significa que o número é ímpar.
       }else {
+
+        // Informa que o número digitado é ímpar.
         System.out.println("Seu número é impar.");
       }
     }
