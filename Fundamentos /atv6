@@ -1,14 +1,24 @@
-import java.util.Scanner; // 0. Importa a classe Scanner
+import java.util.Scanner; // Importa a classe Scanner para poder receber dados digitados pelo usuário.
 
 public class Principal {
     public static void main(String[] args) {
+
+      // Cria o Scanner para conseguir ler o ano de nascimento digitado pelo usuário.
       Scanner scanner = new Scanner(System.in);
 
+      // Pede para o usuário informar o ano em que nasceu.
       System.out.print("Digite sua data de nascimento: ");
-        int nac = scanner.nextInt();
-        int idade = 2026 - nac;
+
+      // Guarda o ano de nascimento dentro da variável "nac".
+      int nac = scanner.nextInt();
+
+      // Calcula a idade subtraindo o ano de nascimento do ano atual.
+      int idade = 2026 - nac;
       
+      // Mostra na tela a idade calculada.
       System.out.println("Sua idade é " + idade + "!");
-        scanner.close();
+
+      // Fecha o Scanner depois que ele não será mais utilizado.
+      scanner.close();
     }
 }
