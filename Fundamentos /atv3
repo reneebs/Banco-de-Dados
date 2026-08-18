@@ -1,22 +1,44 @@
-import java.util.Scanner; // 0. Importa a classe Scanner
+import java.util.Scanner; // Importa a classe Scanner, que permite receber dados digitados pelo usuário.
 
 public class Principal {
     public static void main(String[] args) {
+
+      // Cria um objeto Scanner para conseguir ler o que o usuário digitar no teclado.
       Scanner scanner = new Scanner(System.in);
 
+      // Pede para o usuário digitar o primeiro número.
       System.out.print("Digite o primeiro número inteiro: ");
-        int num = scanner.nextInt();
 
+      // Guarda o primeiro número digitado dentro da variável "num".
+      int num = scanner.nextInt();
+
+      // Pede para o usuário digitar o segundo número.
       System.out.print("Digite o segundo número inteiro: ");
+
+      // Guarda o segundo número digitado dentro da variável "num2".
       int num2 = scanner.nextInt();
 
+      // Verifica se o primeiro número é maior que o segundo.
       if(num>num2) {
+
+        // Se "num" for maior, mostra o primeiro número como o maior.
         System.out.println("O maior número é: " + num + "."); 
+
+      // Caso a primeira condição seja falsa, verifica se o segundo número é maior.
       }else if(num2>num) {
+
+        // Se "num2" for maior, mostra o segundo número como o maior.
         System.out.println("O maior número é: " + num2 + "."); 
+
+      // Se nenhuma das duas condições anteriores for verdadeira,
+      // significa que os dois números possuem o mesmo valor.
       }else {
+
+        // Mostra uma mensagem informando que os números são iguais.
         System.out.println("Os dois números são iguais."); 
       }
+
+      // Apenas pula uma linha no console para deixar a saída mais organizada.
       System.out.println();
         
     }
