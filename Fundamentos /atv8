@@ -1,0 +1,27 @@
+import java.util.Scanner; // Importa a classe Scanner, que permite receber dados digitados pelo usuário.
+
+public class Principal {
+    public static void main(String[] args) {
+
+      // Cria um objeto Scanner para conseguir ler o que o usuário digitar no teclado.
+      Scanner scanner = new Scanner(System.in);
+
+      // Lendo a nota do user
+      System.out.print("Digite sua nota de 0 a 10: ");
+      // Criando uma var nt(nota) e scanneando ela
+      int nt = scanner.nextInt();
+
+      // Estrutura de decisão if else, comparando as notas de 0 a 10.
+      if(nt == 9 || nt == 10) {
+        System.out.println("Excelente.");
+      }else if(nt == 7 || nt == 8) {
+        System.out.println("Bom.");
+      }else if(nt == 5 || nt == 6) {
+        System.out.println("Regular.");
+      }else if(nt == 0 || nt <= 4) {
+        System.out.println("Insuficiente.");
+      }else {
+        System.out.println("Nota inválida.");
+      }
+    }
+}
