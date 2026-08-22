@@ -1,27 +1,55 @@
-import java.util.Scanner; // Importa a classe Scanner, que permite receber dados digitados pelo usuário.
+import java.util.Scanner; // Importa o Scanner, que permite ler o que o usuário digita.
 
 public class Principal {
     public static void main(String[] args) {
 
-      // Cria um objeto Scanner para conseguir ler o que o usuário digitar no teclado.
-      Scanner scanner = new Scanner(System.in);
+        // Cria o Scanner para podermos receber informações digitadas pelo usuário.
+        Scanner scanner = new Scanner(System.in);
 
-      // Lendo a nota do user
-      System.out.print("Digite sua nota de 0 a 10: ");
-      // Criando uma var nt(nota) e scanneando ela
-      int nt = scanner.nextInt();
+        // Mostra uma mensagem pedindo para o usuário informar sua nota.
+        System.out.print("Digite sua nota de 0 a 10: ");
 
-      // Estrutura de decisão if else, comparando as notas de 0 a 10.
-      if(nt == 9 || nt == 10) {
-        System.out.println("Excelente.");
-      }else if(nt == 7 || nt == 8) {
-        System.out.println("Bom.");
-      }else if(nt == 5 || nt == 6) {
-        System.out.println("Regular.");
-      }else if(nt == 0 || nt <= 4) {
-        System.out.println("Insuficiente.");
-      }else {
-        System.out.println("Nota inválida.");
-      }
+        // O try serve para tentar executar o código.
+        // Aqui vamos tentar receber a nota como um número decimal (double).
+        try {
+            double nt = scanner.nextDouble();
+
+            // Verifica se a nota está entre 9 e 10.
+            // Se estiver, considera a nota como "Excelente".
+            if (nt >= 9.0 && nt <= 10.0) {
+                System.out.println("Excelente.");
+
+            // Se a nota estiver entre 7 e 9, considera como "Bom".
+            } else if (nt >= 7.0 && nt < 9.0) {
+                System.out.println("Bom.");
+
+            // Se a nota estiver entre 5 e 7, considera como "Regular".
+            } else if (nt >= 5.0 && nt < 7.0) {
+                System.out.println("Regular.");
+
+            // Se a nota estiver entre 0 e menor que 5,
+            // considera como "Insuficiente".
+            } else if (nt >= 0 && nt < 5.0) {
+                System.out.println("Insuficiente.");
+
+            // Se o usuário digitar um número negativo,
+            // informa que a nota está abaixo de 0.
+            } else if (nt < 0) {
+                System.out.println("Nota abaixo de 0.");
+
+            // Caso a nota não se encaixe em nenhuma das condições anteriores,
+            // mostra uma mensagem de nota inválida.
+            } else {
+                System.out.println("Nota inválida.");
+            }
+
+        // Se o usuário digitar algo que não seja um número,
+        // o programa entra no catch e mostra esta mensagem.
+        } catch (Exception e) {
+            System.out.println("Digite somente números.");
+        }
+
+        // Fecha o Scanner depois que terminamos de utilizá-lo.
+        scanner.close();
     }
 }
